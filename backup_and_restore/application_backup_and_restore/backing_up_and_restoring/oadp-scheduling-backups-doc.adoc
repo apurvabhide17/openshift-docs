@@ -62,7 +62,6 @@ spec:
 EOF
 ----
 <1> `cron` expression to schedule the backup, for example, `0 7 * * *` to perform a backup every day at 7:00.
-+
 [NOTE]
 ====
 To schedule a backup at specific intervals, enter the `<duration_in_minutes>` in the following format:
