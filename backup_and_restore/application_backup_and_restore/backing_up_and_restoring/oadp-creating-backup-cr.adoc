@@ -77,7 +77,7 @@ spec:
 <2> Optional: Specify an array of resources to include in the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified. If unspecified, all resources are included.
 <3> Optional: Specify an array of resources to exclude from the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified.
 <4> Specify the name of the `backupStorageLocations` CR.
-<5> The `ttl` field defines the retention time of the created backup and the backed up data. For example, if you are using Restic as the backup tool, the backed up data items and data contents of the persistent volumes (PVs) is stored until the backup expires. But storing this data consumes more space in the target backup locations. An additional storage will be consumed with frequent backups, which are created even before other in-progress backups might have timed out.
+<5> The `ttl` field defines the retention time of the created backup and the backed up data. For example, if you are using Restic as the backup tool, the backed up data items and data contents of the persistent volumes (PVs) is stored until the backup expires. But storing this data consumes more space in the target backup locations. An additional storage will be consumed with frequent backups, which are created even before other unexpired completed backups might have timed out.
 <6> Map of {key,value} pairs of backup resources that have *all* the specified labels.
 <7> Map of {key,value} pairs of backup resources that have *one or more* of the specified labels.
 
