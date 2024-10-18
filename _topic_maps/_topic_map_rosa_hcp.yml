@@ -83,6 +83,24 @@ Topics:
   Topics:
   - Name: Deploying a cluster
     File: cloud-experts-getting-started-hcp-for-hcp
+  - Name: Creating an admin user
+    File: cloud-experts-getting-started-admin
+  - Name: Setting up an identity provider
+    File: cloud-experts-getting-started-idp
+  - Name: Granting admin rights
+    File: cloud-experts-getting-started-admin-rights
+  - Name: Accessing your cluster
+    File: cloud-experts-getting-started-accessing
+  - Name: Managing worker nodes
+    File: cloud-experts-getting-started-managing-worker-nodes
+  - Name: Autoscaling
+    File: cloud-experts-getting-started-autoscaling
+  - Name: Upgrading your cluster
+    File: cloud-experts-getting-started-upgrading
+  - Name: Deleting your cluster
+    File: cloud-experts-getting-started-deleting
+  - Name: Obtaining support
+    File: cloud-experts-getting-started-support
 # ---
 # Name: Architecture
 # Dir: architecture
@@ -137,28 +155,6 @@ Topics:
 #   File: cloud-experts-dynamic-certificate-custom-domain
 # - Name: Assigning consistent egress IP for external traffic
 #   File: cloud-experts-consistent-egress-ip
-# - Name: Getting started with ROSA
-#   Dir: cloud-experts-getting-started
-#   Distros: openshift-rosa-hcp
-#   Topics:
-- Name: Creating an admin user
-  File: cloud-experts-getting-started-admin
-#   - Name: Setting up an identity provider
-#     File: cloud-experts-getting-started-idp
-#   - Name: Granting admin rights
-#     File: cloud-experts-getting-started-admin-rights
-#   - Name: Accessing your cluster
-#     File: cloud-experts-getting-started-accessing
-#   - Name: Managing worker nodes
-#     File: cloud-experts-getting-started-managing-worker-nodes
-#   - Name: Autoscaling
-#     File: cloud-experts-getting-started-autoscaling
-#   - Name: Upgrading your cluster
-#     File: cloud-experts-getting-started-upgrading
-#   - Name: Deleting your cluster
-#     File: cloud-experts-getting-started-deleting
-- Name: Obtaining support
-  File: cloud-experts-getting-started-support
 - Name: Deploying an application
   Dir: cloud-experts-deploying-application
   Distros: openshift-rosa-hcp
@@ -193,6 +189,8 @@ Topics:
 #   File: rosa-sts-ocm-role
 # - Name: Limits and scalability
 #   File: rosa-limits-scalability
+#- Name: ROSA with HCP limits and scalability
+#  File: rosa-hcp-limits-scalability
 # - Name: Planning your environment
 #   File: rosa-planning-environment
 # - Name: Required AWS service quotas
@@ -783,8 +781,10 @@ Topics:
 # - Name: Triggering updates on image stream changes
 #   File: triggering-updates-on-imagestream-changes
 #   Distros: openshift-rosa-hcp
-# - Name: Image configuration resources
+# - Name: Image configuration resources (Classic)
 #   File: image-configuration
+# - Name: Image configuration resources (HCP)
+#   File: image-configuration-classic-hcp
 #   Distros: openshift-rosa-hcp
 # - Name: Using templates
 #   File: using-templates
@@ -835,7 +835,7 @@ Topics:
   - Name: AWS Elastic Block Store CSI Driver Operator
     File: persistent-storage-csi-ebs
   - Name: AWS Elastic File Service CSI Driver Operator
-    File: osd-persistent-storage-aws-efs-csi
+    File: persistent-storage-csi-aws-efs
 - Name: Generic ephemeral volumes
   File: generic-ephemeral-vols
 - Name: Dynamic provisioning
@@ -1443,10 +1443,6 @@ Topics:
 #     File: cluster-logging-dashboards
 #   - Name: Log visualization with Kibana
 #     File: logging-kibana
-# - Name: Accessing the service logs
-#   File: sd-accessing-the-service-logs
-# - Name: Viewing cluster logs in the AWS Console
-#   File: rosa-viewing-logs
 # - Name: Configuring your Logging deployment
 #   Dir: config
 #   Topics:
@@ -1734,6 +1730,8 @@ Topics:
 #       File: virt-creating-vms-from-web-images
 #     - Name: Creating VMs by uploading images
 #       File: virt-creating-vms-uploading-images
+#     - Name: Cloning VMs
+#       File: virt-cloning-vms
 #     - Name: Creating VMs by cloning PVCs
 #       File: virt-creating-vms-by-cloning-pvcs
 #     - Name: Installing the QEMU guest agent and VirtIO drivers

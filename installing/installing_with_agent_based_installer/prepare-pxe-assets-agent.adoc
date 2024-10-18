@@ -38,6 +38,9 @@ include::modules/pxe-assets-ocp-agent.adoc[leveloffset=+1]
 // Manually adding IBM Z agents
 include::modules/installing-ocp-agent-ibm-z.adoc[leveloffset=+1]
 
+// Configuring network overrides in {ibm-z-title}
+include::modules/configuring-network-overrides-ibmz.adoc[leveloffset=+2]
+
 // Adding {ibm-z-title} agents with z/VM
 include::modules/installing-ocp-agent-ibm-z-zvm.adoc[leveloffset=+2]
 
@@ -48,3 +51,13 @@ include::modules/installing-ocp-agent-ibm-z-zvm.adoc[leveloffset=+2]
 
 // Adding {ibm-z-name} agents with {op-system-base} KVM
 include::modules/installing-ocp-agent-ibm-z-kvm.adoc[leveloffset=+2]
+
+// Adding {ibm-z-title} Logical Partition (LPAR) as agents
+include::modules/adding-ibmz-lpar-agent.adoc[leveloffset=+2]
+
+[role="_additional-resources"]
+.Additional resources
+
+* xref:../../installing/installing_ibm_z/installing-ibm-z.adoc#installing-ibm-z[Installing a cluster with z/VM on {ibm-z-title} and {ibm-linuxone-title}]
+
+

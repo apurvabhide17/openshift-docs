@@ -79,8 +79,12 @@ $ rosa edit cluster --cluster=mycluster --interactive
 [id="rosa-edit-ingress_{context}"]
 == edit ingress
 
-Edits the additional non-default application router for a cluster.
+Edits the default application router for a cluster.
 
+[NOTE]
+====
+For information about editing non-default application routers, see _Additional resources_.
+====
 .Syntax
 [source,terminal]
 ----
@@ -234,7 +238,7 @@ Allows edits to the machine pool in a cluster.
 .Syntax
 [source,terminal]
 ----
-$ rosa edit machinepool --cluster=<cluster_name_or_id> <machinepool_ID> [arguments]
+$ rosa edit machinepool --cluster=<cluster_name_or_id> <machinepool_name> [arguments]
 ----
 
 .Arguments
